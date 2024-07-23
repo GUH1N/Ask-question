@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aks Question</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <i class="fa-regular fa-user"></i>
+            <h3>Ask Me a Question</h3>
+            <input id="text" type="text" placeholder="Ask Question">
+            <div
+            class="buttons">
+                <button type="button" onclick="check()">Accept</button>
+                <button type="button" onclick="clear()">Decline</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let question = ['what is your name','what is your department','what is your age','what is your hobby','what is your favorite color','what is your favorite movie','what is your favorite song','what is your favorite book','what is your favorite game','what is your favorite place','what is your favorite subject'];
+        function check(){
+            let input = document.querySelector('input').value;
+            if(question.includes(input)){
+                alert('I know the answer');
+            }else{
+                alert('invalid question');
+            }
+        }
+        function clear(){
+            document.getElementById('text').value = "";
+        }
+    </script>
+</body>
+</html>
